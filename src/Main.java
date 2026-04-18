@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        BasicCalculator calc=new BasicCalculator();
+
         System.out.println("--- Basic Calculator ---");
 
         System.out.print("Add the first number: ");
@@ -16,16 +18,16 @@ public class Main {
 
         switch (operation) {
             case "+":
-                System.out.println("Result: " + num1 + " + " + num2 + " = " + (num1 + num2));
+                System.out.println("Result: " + num1 + " + " + num2 + " = " +calc.add(num1, num2) );
                 break;
             case "-":
-                System.out.println("Result: " + num1 + " - " + num2 + " = " + (num1 - num2));
+                System.out.println("Result: " + num1 + " - " + num2 + " = " + calc.subtract(num1, num2) );
                 break;
             case "*":
-                System.out.println("Result: " + num1 + " * " + num2 + " = " + (num1 * num2));
+                System.out.println("Result: " + num1 + " * " + num2 + " = " + calc.multiply(num1, num2) );
                 break;
             case "/":
-                System.out.println("Result: " + num1 + " / " + num2 + " = " + (num1 / num2));
+                System.out.println("Result: " + num1 + " / " + num2 + " = " + calc.divide(num1, num2) );
                 break;
             default:
                 System.out.println("Invalid operation!");
